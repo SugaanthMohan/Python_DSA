@@ -16,7 +16,7 @@ Generic Python Data Structures from CS curriculum.
 ###### CONTENTS
 
 1. Sorting Algorithms
-    1. Bubble Sort
+    1. [Bubble Sort](Sorting Algorithms/Bubble_Sort.py)
 
 1. GENERAL
 
