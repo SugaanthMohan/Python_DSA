@@ -22,11 +22,14 @@
 # ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
 # ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
 
+# COMPLEXITY : Best O(n^2); Average O(n^2); Worst O(n^2)
+
+
 def process(container_: any):
     """
     Used for performing bubble sort on a list of items
     :param container_: List of items
-    :return:
+    :return: sorted array
     """
 
     while True:

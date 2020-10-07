@@ -76,7 +76,7 @@ def execute_by_wrappers(exec_containers_, container_: any = None):
             }
         )
 
-        return final_results
+    return final_results
 
 
 def execute_sorting_algorithms(algorithm_names: list = None, container_: any = None, shuffle_: bool = False):
@@ -98,7 +98,12 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
 
     results = execute_by_wrappers(execution_wrappers, container_=container_)
 
-    print(results)
+    for entry in results:
+        print("Name :", entry['Name'])
+        print("Module :", entry['Module_Name'])
+        print("Function :", entry['Function_Name'])
+        print("Input :", entry['Input'])
+        print("Output :", entry['Output'])
 
     return results
 
