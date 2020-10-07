@@ -22,7 +22,7 @@
 # ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
 # ( 1 2 4 5 8 ) –> ( 1 2 4 5 8 )
 
-def bubble_sort(container_: list):
+def process(container_: any):
     """
     Used for performing bubble sort on a list of items
     :param container_: List of items
@@ -42,4 +42,4 @@ def bubble_sort(container_: list):
 
 if __name__ == '__main__':
     my_list = [3, 5, 7, 9, 1, 2, 4, 6, 8]
-    print(bubble_sort(container_=my_list))
+    print(process(container_=my_list))
