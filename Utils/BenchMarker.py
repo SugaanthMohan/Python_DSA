@@ -22,11 +22,12 @@ def seconds_benchmark(function_wrapper):
         """
         start_time = time.time()
         result = function_wrapper(*args, **kwargs)
-        print("Function : %r | Args : %r | P-Args : %r | Elapsed Secs : %.3f Sec(s)"
-              % (
-                  function_wrapper.__name__, args, kwargs, time.time() - start_time
-              )
-              )
+        print("========================== DEBUGGER START =====================")
+        print("Function : %r" % function_wrapper.__name__)
+        print("Args : %r" % args)
+        print("P-Args : %r" % kwargs)
+        print("Elapsed Time : %.3f Sec(s)" % (time.time() - start_time))
+        print("========================== DEBUGGER END =======================\n\n\n")
         return result
 
     return wrap

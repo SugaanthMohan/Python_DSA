@@ -104,7 +104,7 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
         print("Function :", entry['Function_Name'])
         print("Input :", entry['Input'])
         print("Output :", entry['Output'])
-
+        print("\n\n\n")
     return results
 
 
