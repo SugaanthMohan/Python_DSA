@@ -96,8 +96,8 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
         print("Name :", entry['Name'])
         print("Module :", entry['Module_Name'])
         print("Function :", entry['Function_Name'])
-        print("Input :", entry['Input'])
-        print("Output :", entry['Output'])
+#        print("Input :", entry['Input'])
+#        print("Output :", entry['Output'])
         print("\n\n\n")
         results.append(entry)
 
@@ -106,4 +106,5 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
 
 if __name__ == '__main__':
     # execute_sorting_algorithms(algorithm_names=None, container_=list(range(50)), shuffle_=True)
-    execute_sorting_algorithms(algorithm_names=None, container_=list(range(50000)), shuffle_=True)
+    #execute_sorting_algorithms(algorithm_names=None, container_=list(range(50000)), shuffle_=True)
+    execute_sorting_algorithms(algorithm_names=None, container_=list(range(5000)), shuffle_=True)

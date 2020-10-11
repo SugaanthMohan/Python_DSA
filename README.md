@@ -21,6 +21,8 @@ Generic Python Project for Building, Testing, Randomizing and Bench Marking CS C
     1. [Bubble Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Bubble_Sort.py)
     1. [Selection Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Selection_Sort.py)
     1. [Insertion Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Insertion_Sort.py)
+    1. [Merge Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Merge_Sort.py)
+    1. [Tim's Sort (Default Python)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Pythons_Sort.py)
 3. Utilities
     1. [Time Bench Marker (In Seconds) - Decorated](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/BenchMarker.py)
     2. [Generic Shuffler (3 types)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/Shuffler.py)
