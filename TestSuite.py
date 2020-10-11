@@ -48,7 +48,7 @@ def get_algorithm_pairs(package_, algorithm_names: list = None):
 
 
 @seconds_benchmark
-def execute_by_wrappers(exec_containers_, container_: any = None):
+def execute_by_wrappers(exec_items, container_: any = None):
     """
     Used for execution functions by dynamic calling.
     :param exec_containers_: The list of base arguments for execution
@@ -56,27 +56,20 @@ def execute_by_wrappers(exec_containers_, container_: any = None):
     :return:
     """
 
-    final_results = []
+    name, module, function = exec_items
 
-    for exec_items in exec_containers_:
+    func_obj = getattr(module, function)
 
-        name, module, function = exec_items
+    return {
+            'Name': name,
+            'Module_Name': module.__name__,
+            'Function_Name': function,
+            'Module': module,
+            'Function': function,
+            'Input': container_.copy(),
+            'Output': func_obj(container_)
+        }
 
-        func_obj = getattr(module, function)
-
-        final_results.append(
-            {
-                'Name': name,
-                'Module_Name': module.__name__,
-                'Function_Name': function,
-                'Module': module,
-                'Function': function,
-                'Input': container_.copy(),
-                'Output': func_obj(container_)
-            }
-        )
-
-    return final_results
 
 
 def execute_sorting_algorithms(algorithm_names: list = None, container_: any = None, shuffle_: bool = False):
@@ -96,17 +89,21 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
 
     execution_wrappers = get_algorithm_pairs(package_=Sorting_Algorithms, algorithm_names=algorithm_names)
 
-    results = execute_by_wrappers(execution_wrappers, container_=container_)
+    results = list()
 
-    for entry in results:
+    for exec_items in execution_wrappers:
+        entry = execute_by_wrappers(exec_items, container_=container_)
         print("Name :", entry['Name'])
         print("Module :", entry['Module_Name'])
         print("Function :", entry['Function_Name'])
         print("Input :", entry['Input'])
         print("Output :", entry['Output'])
         print("\n\n\n")
+        results.append(entry)
+
     return results
 
 
 if __name__ == '__main__':
-    execute_sorting_algorithms(algorithm_names=None, container_=list(range(50)), shuffle_=True)
+    # execute_sorting_algorithms(algorithm_names=None, container_=list(range(50)), shuffle_=True)
+    execute_sorting_algorithms(algorithm_names=None, container_=list(range(50000)), shuffle_=True)
