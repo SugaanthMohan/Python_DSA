@@ -47,7 +47,7 @@ def process(container_: any):
         min_index = index_1
         for index_2 in range(min_index+1, len(container_)):
 
-            if container_[index_2] < container_[index_1]:
+            if container_[index_2] < container_[min_index]:
                 min_index = index_2
 
         container_[min_index], container_[index_1] = container_[index_1], container_[min_index]
