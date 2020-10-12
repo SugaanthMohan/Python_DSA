@@ -23,11 +23,13 @@ Generic Python Project for Building, Testing, Randomizing and Bench Marking CS C
     1. [Insertion Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Insertion_Sort.py)
     1. [Merge Sort](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Merge_Sort.py)
     1. [Tim's Sort (Default Python)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Sorting_Algorithms/Pythons_Sort.py)
-3. Utilities
+3. Searching Algorithms
+    1. [Binary_Search](https://github.com/SugaanthMohan/Python_DSA/blob/main/Searching_Algorithms/Binary_Search.py)
+    1. [Sequential_Search](https://github.com/SugaanthMohan/Python_DSA/blob/main/Searching_Algorithms/Sequential_Search.py)
+4. Utilities
     1. [Time Bench Marker (In Seconds) - Decorated](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/BenchMarker.py)
     2. [Generic Shuffler (3 types)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/Shuffler.py)
-4. GENERAL
-
+5. GENERAL
     1. [License](https://github.com/SugaanthMohan/Python_DSA/blob/main/LICENSE)
 ****
 
