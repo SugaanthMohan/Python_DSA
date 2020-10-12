@@ -4,6 +4,8 @@ from Utils import Shuffler
 from Utils.BenchMarker import seconds_benchmark
 # SORTING ALGORITHMS IMPORTS USED HERE
 import Sorting_Algorithms
+# SEARCHING ALGORITHMS IMPORTS USED HERE
+import Search_Algorithms
 # USED FOR SYSTEM OPERATIONS
 import sys
 
@@ -71,6 +73,63 @@ def execute_by_wrappers(exec_items, container_: any = None):
         }
 
 
+@seconds_benchmark
+def execute_by_wrappers_search(exec_items, search_element_: any = None, container_: any = None):
+    """
+    Used for execution functions by dynamic calling.
+    :param exec_items: The list of base arguments for execution
+    :param search_element_: The element ot be searched.
+    :param container_: the container containing the set of values
+    :return:
+    """
+
+    name, module, function = exec_items
+
+    func_obj = getattr(module, function)
+
+    return {
+        'Name': name,
+        'Module_Name': module.__name__,
+        'Function_Name': function,
+        'Module': module,
+        'Function': function,
+        'Input_container': container_.copy(),
+        'Search_element': search_element_,
+        'Output': func_obj(container_, search_element_=search_element_)
+    }
+
+
+def execute_searching_algorithms(algorithm_names: list = None, container_: any = None, search_element_: any = None,  shuffle_: bool = False):
+    """
+    Used for executing selective present algorithms
+    :param algorithm_names: The names list of the algorithms
+    :param container_: The name of the container
+    :param search_element_: the element to be searched
+    :param shuffle_: Boolean to check if the input needs to be shuffled or not
+    :return:
+    """
+    # SHUFFLE THE INPUTS IF SHUFFLE IS REQUESTED
+    if shuffle_:
+        container_ = Shuffler.randomize_iterable_shuffler(container_)
+
+    # SET THE MODULES USED FOR THE OPERATION OF THE PACKAGE
+    set_modules(algorithm_names=algorithm_names)
+
+    execution_wrappers = get_algorithm_pairs(package_=Search_Algorithms, algorithm_names=algorithm_names)
+
+    results = list()
+
+    for exec_items in execution_wrappers:
+        entry = execute_by_wrappers_search(exec_items, container_=container_, search_element_=search_element_)
+        print("Name :", entry['Name'])
+        print("Module :", entry['Module_Name'])
+        print("Function :", entry['Function_Name'])
+        #        print("Input :", entry['Input'])
+        #        print("Output :", entry['Output'])
+        print("\n\n\n")
+        results.append(entry)
+
+    return results
 
 def execute_sorting_algorithms(algorithm_names: list = None, container_: any = None, shuffle_: bool = False):
     """
@@ -107,4 +166,4 @@ def execute_sorting_algorithms(algorithm_names: list = None, container_: any = N
 if __name__ == '__main__':
     # execute_sorting_algorithms(algorithm_names=None, container_=list(range(50)), shuffle_=True)
     #execute_sorting_algorithms(algorithm_names=None, container_=list(range(50000)), shuffle_=True)
-    execute_sorting_algorithms(algorithm_names=None, container_=list(range(5000)), shuffle_=True)
+    execute_searching_algorithms(algorithm_names=None, container_=list(range(5000)), search_element_=10000, shuffle_=True)
