@@ -34,6 +34,10 @@ Generic Python Project for Building, Testing, Randomizing and Bench Marking CS C
     1. [LinkedList](https://github.com/SugaanthMohan/Python_DSA/tree/main/Data_Structures/LinkedList)
         1. [Node Creation](https://github.com/SugaanthMohan/Python_DSA/blob/main/Data_Structures/LinkedList/Node.py)
         1. [Singly Linked List](https://github.com/SugaanthMohan/Python_DSA/blob/main/Data_Structures/LinkedList/LinkedList.py)
+4. Classical problems
+    1. [Fibonacci Series](https://github.com/SugaanthMohan/Python_DSA/tree/main/Classical_Problems/fibonacci_series)
+        1. [Generator Function Based](https://github.com/SugaanthMohan/Python_DSA/blob/main/Classical_Problems/fibonacci_series/GeneratorFibonacci.py)
+        2. [Recursive Function Based](https://github.com/SugaanthMohan/Python_DSA/blob/main/Classical_Problems/fibonacci_series/RecursionFibonacci.py)
 5. Utilities
     1. [Time Bench Marker (In Seconds) - Decorated](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/BenchMarker.py)
     2. [Generic Shuffler (3 types)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/Shuffler.py)
