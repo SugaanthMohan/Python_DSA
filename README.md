@@ -42,6 +42,9 @@ Generic Python Project for Building, Testing, Randomizing and Bench Marking CS C
     1. Two Sum Problem
         1. [Description](https://github.com/SugaanthMohan/Python_DSA/tree/main/Interview_Questions/TwoSum/README.md)
         2. [Solution](https://github.com/SugaanthMohan/Python_DSA/tree/main/Interview_Questions/TwoSum/TwoSum.py)
+    1. Longest Substring
+        1. [Description](https://github.com/SugaanthMohan/Python_DSA/tree/main/Interview_Questions/LongestSubstring/README.md)
+        2. [Solution](https://github.com/SugaanthMohan/Python_DSA/tree/main/Interview_Questions/LongestSubstring/LongestSubstring.py)
 6. Utilities
     1. [Time Bench Marker (In Seconds) - Decorated](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/BenchMarker.py)
     2. [Generic Shuffler (3 types)](https://github.com/SugaanthMohan/Python_DSA/blob/main/Utils/Shuffler.py)
