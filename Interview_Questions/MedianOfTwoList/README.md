@@ -1,7 +1,7 @@
 # MEDIAN OF TWO LISTS
 
 ###### DESCRIPTION:
-
+Calculate the median of two list containing integers
 ***
 
 ###### EXAMPLES:
